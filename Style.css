@@ -1,0 +1,147 @@
+
+/*--------GRID--------*/
+
+.container {
+    width: 80rem;
+    height: 45rem;
+    background-color: rgb(235, 228, 228);
+    margin-left: 5rem;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "Category Big_Product Big_Product Product_1 Product_2"
+      "Category Big_Product Big_Product Product_3 Product_4"
+      "Category Product_5 Product_6 Product_7 Product_8"; 
+  }
+
+/* Category*/
+
+  .Category { 
+      grid-area: Category; 
+      background-color: rgb(235, 228, 228);
+      border-right: 0.1rem solid black;
+    }
+
+/*Artcile principal*/
+
+  .Big_Product { 
+      grid-area: Big_Product; 
+      background-image: url(/pictures/products/tshirt-loic-1.png);
+      background-size: cover;
+      margin: 2rem;
+      border-radius: 2rem;
+      margin: 1rem;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: -4px 4px 19px 0px #000000;
+    }
+
+/*Sous artciles*/
+
+  .Product_1 { 
+      grid-area: Product_1; 
+      background-image: url(/pictures/products/bag-born-to-be-a-wilder-1.png);
+      background-size: cover;
+      margin: 1rem;
+      border-radius: 1rem;
+      max-height: 100%;
+      max-width: 100%;
+      display: flex;
+      align-items: flex-end;
+      box-shadow: -2px 2px 19px 0px #000000;
+    }
+  .Product_2 {
+       grid-area: Product_2;
+       background-image: url(/pictures/products/tshirt-data-1.png);
+       background-size: cover;
+       margin: 1rem;
+       border-radius: 1rem; 
+       max-height: 100%;
+       max-width: 100%;
+       display: flex;
+       align-items: flex-end;
+       box-shadow: -2px 2px 19px 0px #000000;
+    }
+  .Product_3 {
+       grid-area: Product_3;
+       background-image: url(/pictures/products/mug-dev-1.png);
+       background-size: cover;
+       margin: 1rem;
+       border-radius: 1rem; max-height: 100%;
+       max-width: 100%;
+       display: flex;
+       align-items: flex-end;
+       box-shadow: -2px 2px 19px 0px #000000;
+    }
+  .Product_4 {
+       grid-area: Product_4;
+       background-image: url(/pictures/products/sweat-born-to-be-a-wildeuse-1.png);
+       background-size: cover;
+       margin: 1rem;
+       border-radius: 1rem; max-height: 100%;
+       max-width: 100%;
+       display: flex;
+       align-items: flex-end;
+       box-shadow: -2px 2px 19px 0px #000000;
+    }
+  .Product_5 {
+       grid-area: Product_5; 
+       background-image: url(/pictures/products/tshirt-dev-1.png);
+       background-size: cover;
+       margin: 1rem;
+       border-radius: 1rem;max-height: 100%;
+       max-width: 100%;
+       display: flex;
+       align-items: flex-end;
+       box-shadow: -2px 2px 19px 0px #000000;
+    }
+  .Product_6 {
+       grid-area: Product_6; 
+       background-image: url(/pictures/products/bag-dev-1.png);
+       background-size: cover;
+       margin: 1rem;
+       border-radius: 1rem;max-height: 100%;
+       max-width: 100%;
+       display: flex;
+       align-items: flex-end;
+       box-shadow: -2px 2px 19px 0px #000000;
+    }
+  .Product_7 {
+       grid-area: Product_7; 
+       background-image: url(/pictures/products/tshirt-cyber-security-1.png);
+       background-size: cover;
+       margin: 1rem;
+       border-radius: 1rem;max-height: 100%;
+       max-width: 100%;
+       display: flex;
+       align-items: flex-end;
+       box-shadow: -2px 2px 19px 0px #000000;
+    }
+  .Product_8 {
+       grid-area: Product_8;
+       background-image: url(/pictures/products/mug-no-code-1.png);
+       background-size: cover;
+       margin: 1rem;
+       border-radius: 1rem; max-height: 100%;
+       max-width: 100%;
+       display: flex;
+       align-items: flex-end;
+       box-shadow: -2px 2px 19px 0px #000000;
+    }
+
+.box {
+    background-color: rgba(247, 108, 108, 0.473);
+    height: 2rem;
+    width: 14rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.big_box {
+    background-color: rgba(247, 108, 108, 0.473);
+    height: 4rem;
+    width: 30rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
