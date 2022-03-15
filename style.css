@@ -1,16 +1,21 @@
 :root {
     --primary-color: #F76C6C;
+    --light-color: rgb(252, 252, 252);
+    --dark-color: rgb(82, 82, 82);
 }
+
 *, *::before, *::after {
     box-sizing: border-box;
+    /*border : solid 1px;*/
+
 }
+
 body{
     margin: 0 ;
     font-family: Lato;
     font-size: 1.5rem;
+    background-color: var(--light-color);
 }
-
-
 
 /*mobile navigation style starts here */
 
@@ -102,6 +107,8 @@ nav a:hover {
     padding-right: 25px;
 }
 
+
+
 /*mobile navigation style stops here */
 
 /*media query for navigation on desktop screen starts here */
@@ -155,7 +162,57 @@ nav a:hover {
     .cart{
         padding-left: 20px;
     }
+
+    /* ALINE */
+    .welcome {
+        background-color :var(--dark-color);
+        width: 66%;
+        margin: 0 auto 0 auto;
+        display: flex;
+        justify-content: stretch;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    .favorite{
+        background-color: var(--primary-color);
+        width: 30%;        
+    }
+    .picture{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(pictures/others/groupe-nb.jpg);
+        background-size: cover;
+        background-color: yellow;
+        width: 70%;
+    }
+
+    h1{
+        color: var(--primary-color);
+        font-size: 2em;
+        text-align: center;
+    }
+
+
+
+    .div-float{
+        background-color: rgb(0, 217, 255);
+        position: relative;
+    }
+    .mug{
+        float: left;
+        position: absolute;
+        z-index: 3;
+        width: 65%;
+        left: 65%;
+        top: -7em;
+    }
+    .favorite p,.favorite h2,.favorite h3, .button{
+        margin : 20px 20px 10px 10px;
+        clear: both;    }
 }
+
+
 
 /*media query for navigation on desktop screen ends here */
 
