@@ -1,11 +1,16 @@
+* {
+  font-size: 100%;
+}
+
 
 /*--------GRID--------*/
 
 .container {
-    width: 80rem;
+    max-width: 80rem;
     height: 45rem;
-    background-color: rgb(235, 228, 228);
-    margin-left: 5rem;
+    background-color: #f1f1f1;
+    margin-right: 5%;
+    margin-left: 5%;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr; 
@@ -20,29 +25,63 @@
 
   .Category { 
       grid-area: Category; 
-      background-color: rgb(235, 228, 228);
-      border-right: 0.1rem solid black;
+      background-color: rgb(241, 241, 241);
+      border-right: 0.2rem solid rgba(247, 108, 108, 0.473);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-around;
+      max-width: 100%;
+      height: 100%;
     }
 
-/*Artcile principal*/
+  button {
+    height: 3rem;
+    width: 9rem;
+    background-color: rgba(247, 108, 108, 0.473);
+    border-color: rgba(247, 108, 108, 0.473);
+  }
+
+/*Article principal*/
 
   .Big_Product { 
-      grid-area: Big_Product; 
-      background-image: url(/pictures/products/tshirt-loic-1.png);
-      background-size: cover;
-      margin: 2rem;
-      border-radius: 2rem;
-      margin: 1rem;
-      display: flex;
-      align-items: flex-end;
-      box-shadow: -4px 4px 19px 0px #000000;
+    grid-area: Big_Product; 
+    background-image: url(/pictures/products/sweat-born-to-be-a-wildeuse-1.png);
+    background-size: cover;
+    margin: 2rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    /*display: flex;
+    align-items: flex-end;*/
+    box-shadow: -4px 4px 19px 0px #000000;
+    position: relative;
+    overflow: hidden;
     }
+  
+  .Big_Product::before {
+    content: "Price";
+    font-size: 30px;
+    position: absolute;
+    height: 15rem;
+    width: 30rem;
+    background-color: rgba(247, 108, 108, 0.473);
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: 0.5s;
+  }
+  
+  .Big_Product:hover::before {
+    transform: translateY(calc(100% - 15rem));
+  }
 
 /*Sous artciles*/
 
   .Product_1 { 
       grid-area: Product_1; 
-      background-image: url(/pictures/products/bag-born-to-be-a-wilder-1.png);
+      background-image: url(/pictures/products/bag-born-to-be-a-wilder-1.png) contain;
       background-size: cover;
       margin: 1rem;
       border-radius: 1rem;
@@ -51,6 +90,8 @@
       display: flex;
       align-items: flex-end;
       box-shadow: -2px 2px 19px 0px #000000;
+      position: relative;
+      overflow: hidden;
     }
   .Product_2 {
        grid-area: Product_2;
@@ -63,85 +104,129 @@
        display: flex;
        align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
+       position: relative;
+       overflow: hidden;
     }
+
   .Product_3 {
        grid-area: Product_3;
        background-image: url(/pictures/products/mug-dev-1.png);
        background-size: cover;
        margin: 1rem;
-       border-radius: 1rem; max-height: 100%;
+       border-radius: 1rem;
+       max-height: 100%;
        max-width: 100%;
        display: flex;
        align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
+       position: relative;
+       overflow: hidden;
     }
   .Product_4 {
        grid-area: Product_4;
        background-image: url(/pictures/products/sweat-born-to-be-a-wildeuse-1.png);
        background-size: cover;
        margin: 1rem;
-       border-radius: 1rem; max-height: 100%;
+       border-radius: 1rem; 
+       max-height: 100%;
        max-width: 100%;
        display: flex;
        align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
+       position: relative;
+       overflow: hidden;
     }
   .Product_5 {
        grid-area: Product_5; 
        background-image: url(/pictures/products/tshirt-dev-1.png);
        background-size: cover;
        margin: 1rem;
-       border-radius: 1rem;max-height: 100%;
+       border-radius: 1rem;
+       max-height: 100%;
        max-width: 100%;
        display: flex;
        align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
+       position: relative;
+       overflow: hidden;
     }
   .Product_6 {
        grid-area: Product_6; 
        background-image: url(/pictures/products/bag-dev-1.png);
        background-size: cover;
        margin: 1rem;
-       border-radius: 1rem;max-height: 100%;
+       border-radius: 1rem;
+       max-height: 100%;
        max-width: 100%;
        display: flex;
        align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
+       position: relative;
+       overflow: hidden;
     }
   .Product_7 {
        grid-area: Product_7; 
        background-image: url(/pictures/products/tshirt-cyber-security-1.png);
        background-size: cover;
        margin: 1rem;
-       border-radius: 1rem;max-height: 100%;
+       border-radius: 1rem;
+       max-height: 100%;
        max-width: 100%;
        display: flex;
        align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
+       position: relative;
+       overflow: hidden;
     }
   .Product_8 {
        grid-area: Product_8;
        background-image: url(/pictures/products/mug-no-code-1.png);
        background-size: cover;
        margin: 1rem;
-       border-radius: 1rem; max-height: 100%;
+       border-radius: 1rem; 
+       max-height: 100%;
        max-width: 100%;
        display: flex;
        align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
+       position: relative;
+       overflow: hidden;
     }
 
-.box {
-    background-color: rgba(247, 108, 108, 0.473);
-    height: 2rem;
+/* Config sous menues*/
+
+  .Product_1::before, .Product_2::before, .Product_3::before, .Product_4::before,
+  .Product_5::before, .Product_6::before, .Product_7::before, .Product_8::before {
+    content: "Price";
+    position: absolute;
+    height: 7rem;
     width: 14rem;
+    background-color: rgba(247, 108, 108, 0.473);
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
-}
-.big_box {
-    background-color: rgba(247, 108, 108, 0.473);
-    height: 4rem;
-    width: 30rem;
-    border-bottom-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-}
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: 0.5s;
+  }
+
+  .Product_1:hover::before, .Product_2:hover::before, .Product_3:hover::before, .Product_4:hover::before,
+  .Product_5:hover::before, .Product_6:hover::before, .Product_7:hover::before, .Product_8:hover::before{
+    transform: translateY(calc(100% - 7rem));
+  }
+
+  .product {
+    display: grid;
+  }
+
+  @media screen and (max-width: 1100px) {
+    .Category {
+      display: none;
+    }
+    .container { 
+      grid-template-columns: repeat(4, 3fr); 
+    }
+    .product {
+      max-width: 100%;
+    }
+  }
