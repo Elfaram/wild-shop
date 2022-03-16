@@ -208,15 +208,17 @@ h1{
     header{
         display: grid;
         grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+        height: 100px;
     }
     .logo{
         grid-column: 2 / 3;
+        padding-left: 0;
         }
     nav {
         all: unset;
         grid-column: 3 / 4;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
     }
     nav ul{
@@ -249,6 +251,7 @@ h1{
     }
     .cart{
         padding-left: 20px;
+        margin-left: -110px;
     }
 
     /* DEBUT ALINE */
