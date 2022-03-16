@@ -1,0 +1,337 @@
+ :root {
+    --primary-color: #F76C6C;
+    --opacity-color: rgba(247,108,108,0.5);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body{
+    margin: 0 ;
+    font-family: Lato;
+    font-size: 1.5rem;
+}
+
+
+
+/*mobile navigation style starts here */
+
+header{
+    background-color: var(--primary-color);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+.logo{
+    margin: 0;
+    padding: 10px;
+    padding-left: 5rem;
+}
+.half-logo{
+    color: black;
+}
+.nav-toggle{
+    display: none;
+}
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+
+}
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+    content: '';
+    position: absolute;
+}
+.nav-toggle-label::before{
+    bottom: 40px;
+}
+.nav-toggle-label::after{
+    top: 40px
+}
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--primary-color);
+    width: 100%;
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: black;
+}
+.nav-toggle:checked ~ nav {
+    display :block;
+}
+.cart{
+    float: right;
+    padding-top: 25px;
+    padding-right: 25px;
+}
+
+/* DEBUT ALINE MOBILE */
+
+.welcome {
+    background-color :var(--dark-color);
+    width: 100%;
+    margin: 0 auto 0 auto;
+    display: flex;
+    display: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+}
+.favorite{
+    order : 1;
+    width: 100%;        
+}
+.favorite p,.favorite h2,.favorite h3 {
+    margin : 20px 20px 10px 10px;
+}
+
+.favorite h3{
+    color : var(--primary-color);
+}
+
+.favorite p{
+    width: 80% ;
+}
+
+.button{
+    margin : 10px;
+    padding: 5px 5px 5px 10px;
+    width: 170px ;
+    height: 3rem ;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: left;
+    background-color: var(--primary-color);
+}
+
+.button p{
+    text-align: center;  
+    margin: auto;
+    font-size: 20px;  
+
+}
+.coeur{
+    background-image: url(pictures/others/coeur.png);
+    background-size: cover;
+    padding: 3%;
+    width: 3rem ;
+    height: 3rem ;
+}
+
+.picture{
+    order : -4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25rem;
+    background-image: url(pictures/others/groupe-nb.jpg);
+    background-size: cover;
+}
+
+h1{
+    color: rgb(252, 250, 251);
+    font-size: 2em;
+    text-align: center;
+}
+
+.div-float{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 30px;
+}
+.mug{
+    width: 70%;
+    top: 0;
+}
+
+/*FIN ALINE*/
+
+/*mobile navigation style stops here */
+
+/*media query for navigation on desktop screen starts here */
+
+@media screen and (min-width:800px){
+    .nav-toggle-label {
+        display: none;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+    .logo{
+        grid-column: 2 / 3;
+        }
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+    nav li {
+        margin-left: 4em;
+        margin-bottom: 0;
+        font-size: 1.4rem;
+    }
+    nav a::before{
+        content: '';
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        bottom: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+    nav a:hover::before{
+        transform: scale(1, 1);
+    }
+    .cart{
+        padding-left: 20px;
+    }
+
+    /* DEBUT ALINE */
+
+    .welcome {
+        background-color :var(--dark-color);
+        width: 66%;
+        margin: 0 auto 0 auto;
+        display: flex;
+        justify-content: stretch;
+        flex-wrap: wrap;
+        align-items: stretch;
+        min-height: 300px;
+        max-height: 380px;
+    }
+    .favorite{
+        width: 25%;
+        order : 2;
+        
+    }
+    .favorite p,.favorite h2,.favorite h3 {
+        margin : 20px 20px 10px 10px;
+    }
+    .favorite p{
+        width: 80% ;
+    }
+
+    .button{
+        margin : 20px 20px 0 10px;
+        padding: 5px 5px 5px 10px;
+        width: 170px ;
+        height: 3rem ;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        background-color: var(--primary-color);
+    }
+
+    .button p{
+        text-align: center;  
+        margin: auto;
+        font-size: 20px;  
+
+    }
+    .coeur{
+        background-image: url(pictures/others/coeur.png);
+        background-size: cover;
+        padding: 3%;
+        width: 3rem ;
+        height: 3rem ;
+    }
+
+    .picture{
+        order : 2;
+        display: flex;
+        justify-content: right;
+        width: 70%;
+        height: 25rem;
+        background-image: url(pictures/others/groupe-nb.jpg);
+        background-size: cover;
+        background-color: yellow;
+    }
+
+    h1{
+        background-color: var(--opacity-color) ;
+        color: rgb(252, 250, 251);
+        font-size: 2em;
+        text-align: right;
+        margin-bottom: 42%;
+        padding: 7px;
+    }
+
+    .div-float{
+        position: relative;
+        margin: 20px;
+    }
+    .mug{
+        float: left;
+        margin: 0 20px 0 20px;
+        position: absolute;
+        z-index: 1;
+        width: 23vw;
+        left: 28%;
+        top: -250px;
+    }
+
+
+
+    .blue{ /* A VOIR*/
+        background-color: blueviolet;
+        height: 3rem;
+    }
+    /* FIN ALINE
+
+}
+
+/*media query for navigation on desktop screen ends here */
