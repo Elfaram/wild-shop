@@ -36,10 +36,13 @@
     }
 
   button {
-    height: 3rem;
+    height: 9rem;
     width: 9rem;
-    background-color: rgba(247, 108, 108, 0.473);
-    border-color: rgba(247, 108, 108, 0.473);
+    background-color: rgb(247, 108, 108, 0.473);
+    border-color: rgb(247, 108, 108, 0.473);
+    box-shadow: -1px 1px 10px 0px black;
+    border-radius: 40%;
+    /*rgba(247, 108, 108, 0.473)*/
   }
 
 /*Article principal*/
@@ -81,14 +84,12 @@
 
   .Product_1 { 
       grid-area: Product_1; 
-      background-image: url(/pictures/products/bag-born-to-be-a-wilder-1.png) contain;
+      background-image: url(/pictures/products/bag-born-to-be-a-wilder-1.png);
       background-size: cover;
       margin: 1rem;
       border-radius: 1rem;
       max-height: 100%;
       max-width: 100%;
-      display: flex;
-      align-items: flex-end;
       box-shadow: -2px 2px 19px 0px #000000;
       position: relative;
       overflow: hidden;
@@ -101,8 +102,6 @@
        border-radius: 1rem; 
        max-height: 100%;
        max-width: 100%;
-       display: flex;
-       align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
        position: relative;
        overflow: hidden;
@@ -116,8 +115,6 @@
        border-radius: 1rem;
        max-height: 100%;
        max-width: 100%;
-       display: flex;
-       align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
        position: relative;
        overflow: hidden;
@@ -130,8 +127,6 @@
        border-radius: 1rem; 
        max-height: 100%;
        max-width: 100%;
-       display: flex;
-       align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
        position: relative;
        overflow: hidden;
@@ -144,8 +139,6 @@
        border-radius: 1rem;
        max-height: 100%;
        max-width: 100%;
-       display: flex;
-       align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
        position: relative;
        overflow: hidden;
@@ -158,8 +151,6 @@
        border-radius: 1rem;
        max-height: 100%;
        max-width: 100%;
-       display: flex;
-       align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
        position: relative;
        overflow: hidden;
@@ -172,8 +163,6 @@
        border-radius: 1rem;
        max-height: 100%;
        max-width: 100%;
-       display: flex;
-       align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
        position: relative;
        overflow: hidden;
@@ -186,8 +175,6 @@
        border-radius: 1rem; 
        max-height: 100%;
        max-width: 100%;
-       display: flex;
-       align-items: flex-end;
        box-shadow: -2px 2px 19px 0px #000000;
        position: relative;
        overflow: hidden;
@@ -219,14 +206,24 @@
     display: grid;
   }
 
-  @media screen and (max-width: 1100px) {
+  /* RESPONSIVE */
+
+  @media screen and (max-width: 810px) {
     .Category {
       display: none;
     }
-    .container { 
-      grid-template-columns: repeat(4, 3fr); 
+    .Big_Product {
+      display: none;
     }
-    .product {
-      max-width: 100%;
+    .container { 
+      /*grid-template-columns: repeat(2fr, 4fr);*/
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: 1fr 1fr 1fr 1fr; 
+      gap: 0px 0px; 
+      grid-template-areas: 
+        "Product_1 Product_2"
+        "Product_3 Product_4"
+        "Product_5 Product_6"
+        "Product_7 Product_8"; 
     }
   }
