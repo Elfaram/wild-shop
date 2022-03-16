@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+/* *{
+    border : solid 1px;
+} */
+
 :root {
     --primary-color: #F76C6C;
     --light-color: rgb(252, 252, 252);
@@ -120,9 +124,12 @@ nav a:hover {
     width: 100%;
     margin: 0 auto 0 auto;
     display: flex;
-    display: column;
+    justify-content: column-reverse;
     flex-wrap: wrap;
     align-items: stretch;
+}
+.welcome a{
+    text-decoration : none;
 }
 .favorite{
     order : 1;
@@ -138,12 +145,14 @@ nav a:hover {
 
 .favorite p{
     width: 80% ;
+    font-size: 20px;
+    padding-right : 20%;
 }
 
 .button{
-    margin : 10px;
+    margin : 40px 10px 10px 10px;
     padding: 5px 5px 5px 10px;
-    width: 170px ;
+    width: 250px ;
     height: 3rem ;
     border-radius: 1rem;
     display: flex;
@@ -152,26 +161,33 @@ nav a:hover {
 }
 
 .button p{
+    border: solid 2px;
     text-align: center;  
     margin: auto;
-    font-size: 20px;  
-
+    font-size: 10px;  
+    padding-right : 0;
+    color:white;
 }
 .coeur{
+    border: solid 2px;
     background-image: url(pictures/pictos/coeur.png);
-    padding: 3%;
+    padding: 3% 60% 3% 3%;
     width: 3rem ;
     height: 3rem ;
     background-size: 2rem;
     background-repeat: no-repeat;
     background-position: center;
 }
-
+.coeur:hover {
+    background-image: url(pictures/pictos/coeur-blanc.png);
+}
+.button:hover {
+    background-color: var(--opacity-color);
+    color: var(--opacity-color);
+}
 .picture{
-    order : -4;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
     height: 25rem;
     background-image: url(pictures/others/groupe-nb.jpg);
@@ -179,9 +195,13 @@ nav a:hover {
 }
 
 h1{
+    background-color: var(--opacity-color) ;
     color: rgb(252, 250, 251);
     font-size: 2em;
     text-align: center;
+    margin-bottom: 0%;
+    padding: 3px;
+    margin-bottom: 2px;
 }
 
 .div-float{
@@ -191,16 +211,19 @@ h1{
     padding-right: 30px;
 }
 .mug{
-    width: 70%;
+    width: 60%;
     top: 0;
+    position: relative;
+    z-index: 10;
+    /* left: 28%; */
+    /* top: -50px; */
 }
-
 /*FIN ALINE*/
-
 /*mobile navigation style stops here */
 
-/*media query for navigation on desktop screen starts here */
 
+
+/*media query for navigation on desktop screen starts here */
 @media screen and (min-width:800px){
     .nav-toggle-label {
         display: none;
@@ -254,8 +277,10 @@ h1{
     /* DEBUT ALINE */
 
     .welcome {
+        position: relative;
+        top:85px;
+        margin: auto;
         width: 66%;
-        margin: 0 auto 0 auto;
         display: flex;
         justify-content: stretch;
         flex-wrap: wrap;
@@ -263,10 +288,11 @@ h1{
         min-height: 300px;
         max-height: 380px;
     }
+
+
     .favorite{
-        width: 25%;
+        width: 30%;
         order : 2;
-        
     }
     .favorite p,.favorite h2,.favorite h3 {
         margin : 20px 20px 10px 10px;
@@ -274,25 +300,28 @@ h1{
     .favorite p{
         width: 80% ;
         font-size: 20px;
+        padding-right : 20%;
     }
-
     .button{
-        margin : 20px 20px 0 10px;
-        padding: 5px 15px 5px 10px;
-        width: 170px ;
+        margin : 20px 20px 0 50px;
+        padding: 5px 50px 5px 10px;
+        width: 200px ;
         height: 3rem ;
         border-radius: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: var(--primary-color);
+        text-decoration: none;
     }
     .button p{
         text-align: center;  
         margin: auto;
         font-size: 20px;  
-
+        padding-right : 0;
+        color:white;
     }
+
     .coeur{
         background-image: url(pictures/pictos/coeur.png);
         background-size: 2rem;
@@ -301,7 +330,13 @@ h1{
         width: 3rem ;
         height: 3rem ;
     }
-
+    .coeur:hover {
+        background-image: url(pictures/pictos/coeur-blanc.png);
+    }
+    .button:hover {
+        background-color: var(--opacity-color);
+        color: var(--opacity-color);
+    }
     .picture{
         order : 2;
         display: flex;
@@ -334,12 +369,6 @@ h1{
         left: 28%;
         top: -250px;
     }
-    .blue{ /* A VOIR*/
-        background-color: blueviolet;
-        height: 6rem;
-    }
     /* FIN ALINE BUREAU*/
-
 }
-
 /*media query for navigation on desktop screen ends here */
