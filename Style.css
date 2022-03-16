@@ -1,0 +1,247 @@
+
+ :root {
+  --primary-color: #F76C6C;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body{
+  margin: 0 ;
+  font-family: Lato;
+  font-size: 1.5rem;
+}
+
+
+
+/*mobile navigation style starts here */
+
+ header{
+  background-color: var(--primary-color);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+.logo{
+  margin: 0;
+  padding: 10px;
+  padding-left: 5rem;
+}
+.half-logo{
+  color: black;
+}
+.nav-toggle{
+  display: none;
+}
+.nav-toggle-label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+
+}
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+  content: '';
+  position: absolute;
+}
+.nav-toggle-label::before{
+  bottom: 40px;
+}
+.nav-toggle-label::after{
+  top: 40px
+}
+nav{
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--primary-color);
+  width: 100%;
+  display: none;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: black;
+}
+.nav-toggle:checked ~ nav {
+  display :block;
+}
+.cart{
+  float: right;
+  padding-top: 25px;
+  padding-right: 25px;
+}
+
+/*mobile navigation style stops here */
+
+/*media query for navigation on desktop screen starts here */
+
+ @media screen and (min-width:800px){
+  .nav-toggle-label {
+      display: none;
+  }
+  header{
+      display: grid;
+      grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  .logo{
+      grid-column: 2 / 3;
+      }
+  nav {
+      all: unset;
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  nav ul{
+      display: flex;
+      justify-content: flex-end;
+  }
+  nav a {
+      opacity: 1;
+      position: relative;
+  }
+  nav li {
+      margin-left: 4em;
+      margin-bottom: 0;
+      font-size: 1.4rem;
+  }
+  nav a::before{
+      content: '';
+      display: block;
+      height: 5px;
+      background: black;
+      position: absolute;
+      bottom: -.75em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
+  }
+  nav a:hover::before{
+      transform: scale(1, 1);
+  }
+  .cart{
+      padding-left: 20px;
+  }
+} 
+
+
+.bloc-container{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 66%;
+  height: 500px;
+}
+.photo{
+ 
+  width: 100%;
+  height: 500px;
+  margin-top: 70px;
+  margin-right: 110px;
+}
+.description{
+  border: 2px black solid;
+  width: 35%;
+  height: 500px;
+  margin-top: 70px;
+}
+.colors{
+  border: 1.5px black solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  
+
+}
+
+.container{
+  display: flex;
+  margin: auto;
+  width: 66%;
+  height: 200px;
+  border: 2px black solid;
+  margin-top: 90px;
+  justify-content: center;
+  }
+.about{
+  display: flex;
+  border: 1px black solid;
+  padding: 20px;
+  margin: 5px;
+  margin-bottom: 15%;
+  align-items: center;
+  
+
+}
+.look{
+  display: flex;
+  margin: auto;
+  width: 66%;
+  height: 200px;
+  margin-top: 90px;
+  justify-content: space-between;
+  padding: 5px;
+  
+}
+.style{
+  border: 2px black solid;
+  padding: 80px;
+}
+.look1{
+  background: url(./pictures/products/tshirt-data-1.png)center/cover;
+}
+.look2{
+  background: url(./pictures/products/mug-cyber-security-1.png)center/cover;
+} 
+.look3{
+  background: url(./pictures/products/tshirt-dev-1.png)center/cover;
+}
+.look4{
+  background: url(./pictures/products/bag-no-code-1.png)center/cover;
+}
+.look5{
+  background: url(./pictures/products/tshirt-loic-1.png)center/cover;
+}
+
+
+.sug{
+  text-align: center;
+  padding-bottom: 5px;
+}
+.information{
+  text-align: left;
+}

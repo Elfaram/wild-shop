@@ -1,25 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" type="text/css" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wild Shop</title>
-</head>
-<body>
-    <nav>
-        
-    </nav>
-    <header>
-
-    </header>
-    <main>
-
-    </main>
-    <footer>
-
-    </footer>
+    <meta name="description" content="description"/>
+    <meta name="author" content="author" />
+    <meta name="keywords" content="keywords" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap" rel="stylesheet"> 
+    <style type="text/css">.body { width: auto; }</style>
+    <meta property="og:title" content="Wild shop" />
+    <meta property="og:description" content="Wild shop />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="#" />
+    <meta property="og:url" content="https://www.wildshop.com" />
     
-</body>
+  </head>
+  <body>
+      <header>
+          <img class="logo" src="pictures/pictos/logo-150px.png" alt="logo wild shop"/>
+          <input type="checkbox" id="nav-toggle" class="nav-toggle"/>  
+          <nav>
+                  <ul class="navigation">
+                      <li><a href="/">Home</a></li>
+                      <li><a href="#">Produits</a></li>
+                      <li><a href="#">A propos</a></li>
+              </ul>
+            </nav>
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label>
+          <img class="cart" src="pictures/pictos/card-50px.png" alt="icone panier"/>
+      </header> 
+      <main>
+          <div class="bloc-container">
+              <div class="product"><img class="photo" src="./pictures/products/sweat-born-to-be-a-wilder-1.png" alt="Hoodies"></div>
+              <div class="description">
+                <p>Hoodies          29,99</p> 
+                 <p>Color disponibles:</p> 
+                 <div class="colors">
+                 <div class="color1"> BLANC</div>
+                <DIV class="color2">ROUGE</DIV>
+                <div class="color3">Bleu</div>
+                </div>
+                 <p>Taille</p>
+                 
+                 <div class="Coloris-disponibles"></div>
+                 <form action="">   
+                 <select name="Sélecteur de taille">
+                     <option value="xs"></option>
+                     <option value="s"></option>
+                     <option value="m"></option>
+                     <option value="l"></option>
+                     <option value="xl"></option>
+                     <option value="xxl"></option>
+                     <option value="xxxl"></option>
+
+                 </select>
+                 Ajouter au panier 
+                </form>
+                </div>
+              
+         </div> 
+         <div class="container">
+          <div class="about info">description</div>
+          <div class="about Livraison">livraison</div>
+          <div class="about entretien"> entretien</div>
+        <p>Molleton brossé 85% coton biologique filé et peigné, 15% polyester recyclé 280 GSM</p> 
+        </div>
+
+         <p class="sug">VOUS AIMEREZ AUSSI</p>
+         <div class="look">
+          
+           <div class="style look1"></div>
+           <div class="style look2"></div>
+           <div class="style look3"></div>
+           <div class="style look4"></div>
+           <div class="style look5"></div>
+         </div>
+         
+          
+        
+      </main>
+
+  </body>
 </html>
