@@ -1,0 +1,218 @@
+:root {
+    --primary-color: #F76C6C;
+    --light-color: rgb(252, 252, 252);
+    --dark-color: rgb(82, 82, 82);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    /*border : solid 1px;*/
+
+}
+
+body{
+    margin: 0 ;
+    font-family: Lato;
+    font-size: 1.5rem;
+    background-color: var(--light-color);
+}
+
+/*mobile navigation style starts here */
+
+header{
+    background-color: var(--primary-color);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+.logo{
+    margin: 0;
+    padding: 10px;
+}
+.half-logo{
+    color: black;
+}
+.nav-toggle{
+    display: none;
+}
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+
+}
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+    content: '';
+    position: absolute;
+}
+.nav-toggle-label::before{
+    bottom: 40px;
+}
+.nav-toggle-label::after{
+    top: 40px
+}
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--primary-color);
+    width: 100%;
+    display: none;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: black;
+}
+.nav-toggle:checked ~ nav {
+    display :block;
+}
+.cart{
+    float: right;
+    padding-top: 25px;
+    padding-right: 25px;
+}
+
+
+
+/*mobile navigation style stops here */
+
+/*media query for navigation on desktop screen starts here */
+
+@media screen and (min-width:800px){
+    .nav-toggle-label {
+        display: none;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+    .logo{
+        grid-column: 2 / 3;
+        }
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+    nav li {
+        margin-left: 4em;
+        margin-bottom: 0;
+        font-size: 0.2rem;
+    }
+    nav a::before{
+        content: '';
+        display: block;
+        height: 5px;
+        background: black;
+        position: absolute;
+        bottom: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+    nav a:hover::before{
+        transform: scale(1, 1);
+    }
+    .cart{
+        padding-left: 20px;
+    }
+
+    /* ALINE */
+    .welcome {
+        background-color :var(--dark-color);
+        width: 66%;
+        margin: 0 auto 0 auto;
+        display: flex;
+        justify-content: stretch;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    .favorite{
+        background-color: var(--primary-color);
+        width: 30%;        
+    }
+    .picture{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(pictures/others/groupe-nb.jpg);
+        background-size: cover;
+        background-color: yellow;
+        width: 70%;
+    }
+
+    h1{
+        color: var(--primary-color);
+        font-size: 2em;
+        text-align: center;
+    }
+
+
+
+    .div-float{
+        background-color: rgb(0, 217, 255);
+        position: relative;
+    }
+    .mug{
+        float: left;
+        position: absolute;
+        z-index: 3;
+        width: 65%;
+        left: 65%;
+        top: -7em;
+    }
+    .favorite p,.favorite h2,.favorite h3, .button{
+        margin : 20px 20px 10px 10px;
+        clear: both;    }
+}
+
+
+
+/*media query for navigation on desktop screen ends here */
+
