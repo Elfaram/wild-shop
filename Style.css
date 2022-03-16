@@ -1,60 +1,117 @@
-
- a{
-     color: white;
- }
- .icons {
-
-    display: flex;
-    justify-content: space-around ;
-    flex-direction: row;
-    font-size: 35px; 
+/* @media screen and (max-width:100%) */
+ 
+* {
     
-    
-} 
+  box-sizing: border-box;
+}
+
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 300px;
-    background-color: rgb(247, 108, 108);
-    color: white;
-    text-align: center;
+
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+  background-color: rgb(247, 108, 108);
+  text-align: center;
 }
-section1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-    background-color: whitesmoke;
-    margin: 100;
+section > p {
+  width: 150px;
+  height: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  color: whitesmoke;
 }
-
-li {
-    padding-top: 5%;
-    color: black;
+a {
+  color: white;
+  width: 300px;
 }
+.information {
 
-
-section2 {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding-left: 10%;
-    padding-top: 4%;
-    width: 30%;
-
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(247, 108, 108);
 }
-
-section3 {
-     display: flex;
-     flex-direction: column;
-     padding-left: 50%;
-     height: 20%;
-     border: solid;
-     
-
-
-    
-
+.picto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  /* width: 100%; */
+}
+.paiement {
+  background-image: url(pictures/pictos/paiement.png);
+  background-repeat: no-repeat;
+  /* background-size: auto; */
+  margin: auto;
+  width: 40px;
+  height: 55px;
+}
+.france {
+  background-image: url(pictures/pictos/france.png);
+  background-repeat: no-repeat;
+  /* background-size: auto; */
+  margin: auto;
+  width: 65px;
+  height: 55px;
+}
+.contact {
+  background-image: url(pictures/pictos/contact.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin: auto;
+  width: 65px;
+  height: 55px;
+}
+.return {
+  background-image: url(pictures/pictos/return.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  margin: auto;
+  width: 55px;
+  height: 55px;
+}
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 100px;
+  margin: auto;
+}
+.question p,
+.mail {
+  width: auto;
+  text-align: center;
+}
+.mentions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  height: 35%;
+  text-align: center;
+  margin: 0;
+}
+.mentions p {
+  width: 100%;
+}
+.icons {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  font-size: 20px;
 }
