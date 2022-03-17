@@ -1,117 +1,577 @@
-/* @media screen and (max-width:100%) */
- 
-* {
-    
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-footer {
+:root {
+  --primary-color: #F76C6C;
+  --light-color: rgb(252, 252, 252);
+  --dark-color: rgb(82, 82, 82);
+  --opacity-color: rgba(247,108,108,0.5);
+
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  /*border : solid 1px;*/
+
+}
+body{
+  margin: 0 ;
+  font-family: Lato;
+  font-size: 1.5rem;
+  background-color: var(--light-color);
+}
 
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+/*mobile navigation style starts here */
+
+header{
+  background-color: var(--primary-color);
+  text-align: center;
   position: fixed;
-  left: 0;
-  bottom: 0;
+  z-index: 999;
   width: 100%;
-  height: 400px;
-  background-color: rgb(247, 108, 108);
-  text-align: center;
 }
-section > p {
-  width: 150px;
-  height: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  color: whitesmoke;
-}
-a {
-  color: white;
-  width: 300px;
-}
-.information {
-
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(247, 108, 108);
-}
-.picto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  /* width: 100%; */
-}
-.paiement {
-  background-image: url(pictures/pictos/paiement.png);
-  background-repeat: no-repeat;
-  /* background-size: auto; */
-  margin: auto;
-  width: 40px;
-  height: 55px;
-}
-.france {
-  background-image: url(pictures/pictos/france.png);
-  background-repeat: no-repeat;
-  /* background-size: auto; */
-  margin: auto;
-  width: 65px;
-  height: 55px;
-}
-.contact {
-  background-image: url(pictures/pictos/contact.png);
-  background-repeat: no-repeat;
-  background-size: auto;
-  margin: auto;
-  width: 65px;
-  height: 55px;
-}
-.return {
-  background-image: url(pictures/pictos/return.png);
-  background-repeat: no-repeat;
-  background-size: auto;
-  margin: auto;
-  width: 55px;
-  height: 55px;
-}
-.question {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-  height: 100px;
-  margin: auto;
-}
-.question p,
-.mail {
-  width: auto;
-  text-align: center;
-}
-.mentions {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 50%;
-  height: 35%;
-  text-align: center;
+.logo{
   margin: 0;
+  padding: 10px;
+  padding-left: 5rem;
 }
-.mentions p {
-  width: 100%;
+.half-logo{
+  color: black;
 }
-.icons {
-  width: 60%;
+.nav-toggle{
+  display: none;
+}
+.nav-toggle-label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding: 0;
-  font-size: 20px;
 }
+.nav-toggle-label span,
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+
+}
+.nav-toggle-label::before,
+.nav-toggle-label::after{
+  content: '';
+  position: absolute;
+}
+.nav-toggle-label::before{
+  bottom: 40px;
+}
+.nav-toggle-label::after{
+  top: 40px
+}
+nav{
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--primary-color);
+  width: 100%;
+  display: none;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: black;
+}
+.nav-toggle:checked ~ nav {
+  display :block;
+}
+.cart{
+  float: right;
+  padding-top: 25px;
+  padding-right: 25px;
+}
+
+/* DEBUT ALINE MOBILE */
+
+.welcome {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  display: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.favorite{
+  order : 1;
+  width: 100%;        
+}
+.favorite p,.favorite h2,.favorite h3 {
+  margin : 20px 20px 10px 10px;
+}
+
+.favorite h3{
+  color : var(--primary-color);
+}
+
+.favorite p{
+  width: 80% ;
+}
+
+.button{
+  margin : 10px;
+  padding: 5px 5px 5px 10px;
+  width: 170px ;
+  height: 3rem ;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: left;
+  background-color: var(--primary-color);
+}
+
+.button p{
+  text-align: center;  
+  margin: auto;
+  font-size: 20px;  
+
+}
+.coeur{
+  background-image: url(pictures/pictos/coeur.png);
+  padding: 3%;
+  width: 3rem ;
+  height: 3rem ;
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.picture{
+  order : -4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25rem;
+  background-image: url(pictures/others/groupe-nb.jpg);
+  background-size: cover;
+}
+
+h1{
+  color: rgb(252, 250, 251);
+  font-size: 2em;
+  text-align: center;
+}
+
+.div-float{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 30px;
+}
+.mug{
+  width: 70%;
+  top: 0;
+}
+
+/*FIN ALINE*/
+
+/*-------ROMAIN-------*/
+/*--------GRID--------*/
+
+.container_grid {
+  max-width: 80rem;
+  height: 45rem;
+  background-color: #f1f1f1;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 3rem;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Category Big_Product Big_Product Product_1 Product_2"
+    "Category Big_Product Big_Product Product_3 Product_4"
+    "Category Product_5 Product_6 Product_7 Product_8"; 
+}
+
+/* Category*/
+
+.Category { 
+  grid-area: Category; 
+  background-color: rgb(241, 241, 241);
+  border-right: 0.2rem solid rgba(247, 108, 108, 0.473);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 100%;
+  height: 100%;
+}
+
+button {
+  height: 9rem;
+  width: 9rem;
+  background-color: rgb(247, 108, 108, 0.473);
+  border-color: rgb(247, 108, 108, 0.473);
+  box-shadow: -1px 1px 10px 0px black;
+  border-radius: 40%;
+  /*rgba(247, 108, 108, 0.473)*/
+}
+
+/*Article principal*/
+
+.Big_Product { 
+  grid-area: Big_Product; 
+  background-image: url(/pictures/products/sweat-born-to-be-a-wildeuse-1.png);
+  background-size: cover;
+  margin: 2rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  /*display: flex;
+  align-items: flex-end;*/
+  box-shadow: -4px 4px 19px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  }
+
+.Big_Product::before {
+  content: "Hoodies - Born To Be a Wildeuse ";
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  position: absolute;
+  height: 15rem;
+  width: 30rem;
+  background-color: rgba(247, 108, 108, 0.473);
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+.Big_Product:hover::before {
+  transform: translateY(calc(150% - 15rem));
+}
+
+/*Sous artciles*/
+
+.Product_1 { 
+  grid-area: Product_1; 
+  background-image: url(/pictures/products/bag-born-to-be-a-wilder-1.png);
+  background-size: cover;
+  margin: 1rem;
+  border-radius: 1rem;
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: -2px 2px 19px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  }
+.Product_2 {
+  grid-area: Product_2;
+  background-image: url(/pictures/products/tshirt-data-1.png);
+  background-size: cover;
+  margin: 1rem;
+  border-radius: 1rem; 
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: -2px 2px 19px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  }
+
+.Product_3 {
+  grid-area: Product_3;
+  background-image: url(/pictures/products/mug-dev-1.png);
+  background-size: cover;
+  margin: 1rem;
+  border-radius: 1rem;
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: -2px 2px 19px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  }
+.Product_4 {
+  grid-area: Product_4;
+  background-image: url(/pictures/products/sweat-born-to-be-a-wildeuse-1.png);
+  background-size: cover;
+  margin: 1rem;
+  border-radius: 1rem; 
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: -2px 2px 19px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  }
+.Product_5 {
+  grid-area: Product_5; 
+  background-image: url(/pictures/products/tshirt-dev-1.png);
+  background-size: cover;
+  margin: 1rem;
+  border-radius: 1rem;
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: -2px 2px 19px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  }
+.Product_6 {
+  grid-area: Product_6; 
+  background-image: url(/pictures/products/bag-dev-1.png);
+  background-size: cover;
+  margin: 1rem;
+  border-radius: 1rem;
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: -2px 2px 19px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  }
+.Product_7 {
+  grid-area: Product_7; 
+  background-image: url(/pictures/products/tshirt-cyber-security-1.png);
+  background-size: cover;
+  margin: 1rem;
+  border-radius: 1rem;
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: -2px 2px 19px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  }
+.Product_8 {
+  grid-area: Product_8;
+  background-image: url(/pictures/products/mug-no-code-1.png);
+  background-size: cover;
+  margin: 1rem;
+  border-radius: 1rem; 
+  max-height: 100%;
+  max-width: 100%;
+  box-shadow: -2px 2px 19px 0px #000000;
+  position: relative;
+  overflow: hidden;
+  }
+
+/* Config sous menues*/
+
+.Product_1::before, .Product_2::before, .Product_3::before, .Product_4::before,
+.Product_5::before, .Product_6::before, .Product_7::before, .Product_8::before {
+  content: "Price";
+  position: absolute;
+  height: 7rem;
+  width: 14rem;
+  background-color: rgba(247, 108, 108, 0.473);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+.Product_1:hover::before, .Product_2:hover::before, .Product_3:hover::before, .Product_4:hover::before,
+.Product_5:hover::before, .Product_6:hover::before, .Product_7:hover::before, .Product_8:hover::before{
+  transform: translateY(calc(150% - 7rem));
+}
+
+.product {
+  display: grid;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 810px) {
+  .Category {
+    display: none;
+  }
+  .Big_Product {
+    display: none;
+  }
+  .container_grid { 
+    /*grid-template-columns: repeat(2fr, 4fr);*/
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "Product_1 Product_2"
+      "Product_3 Product_4"
+      "Product_5 Product_6"
+      "Product_7 Product_8"; 
+  }
+}
+
+/*-----FIN GRID-----*/
+/*----FIN ROMAIN----*/
+
+/*mobile navigation style stops here */
+
+/*media query for navigation on desktop screen starts here */
+
+@media screen and (min-width:800px){
+  .nav-toggle-label {
+      display: none;
+  }
+  header{
+      display: grid;
+      grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  .logo{
+      grid-column: 2 / 3;
+      }
+  nav {
+      all: unset;
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  nav ul{
+      display: flex;
+      justify-content: flex-end;
+  }
+  nav a {
+      opacity: 1;
+      position: relative;
+  }
+  nav li {
+      margin-left: 4em;
+      margin-bottom: 0;
+      font-size: 1.4rem;
+  }
+  nav a::before{
+      content: '';
+      display: block;
+      height: 5px;
+      background: black;
+      position: absolute;
+      bottom: -.75em;
+      left: 0;
+      right: 0;
+      transform: scale(0, 1);
+      transition: transform ease-in-out 250ms;
+  }
+  nav a:hover::before{
+      transform: scale(1, 1);
+  }
+  .cart{
+      padding-left: 20px;
+  }
+
+  /* DEBUT ALINE */
+
+  .welcome {
+      width: 66%;
+      margin: 0 auto 0 auto;
+      display: flex;
+      justify-content: stretch;
+      flex-wrap: wrap;
+      align-items: stretch;
+      min-height: 300px;
+      max-height: 380px;
+  }
+  .favorite{
+      width: 25%;
+      order : 2;
+      
+  }
+  .favorite p,.favorite h2,.favorite h3 {
+      margin : 20px 20px 10px 10px;
+  }
+  .favorite p{
+      width: 80% ;
+      font-size: 20px;
+  }
+
+  .button{
+      margin : 20px 20px 0 10px;
+      padding: 5px 15px 5px 10px;
+      width: 170px ;
+      height: 3rem ;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--primary-color);
+  }
+  .button p{
+      text-align: center;  
+      margin: auto;
+      font-size: 20px;  
+
+  }
+  .coeur{
+      background-image: url(pictures/pictos/coeur.png);
+      background-size: 2rem;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 3rem ;
+      height: 3rem ;
+  }
+
+  .picture{
+      order : 2;
+      display: flex;
+      justify-content: right;
+      width: 70%;
+      height: 25rem;
+      background-image: url(pictures/others/groupe-nb.jpg);
+      background-size: cover;
+  }
+
+  h1{
+      background-color: var(--opacity-color) ;
+      color: rgb(252, 250, 251);
+      font-size: 2em;
+      text-align: right;
+      margin-bottom: 42%;
+      padding: 7px;
+  }
+
+  .div-float{
+      position: relative;
+      margin: 20px;
+  }
+  .mug{
+      float: left;
+      margin: 0 20px 0 20px;
+      position: absolute;
+      z-index: 1;
+      width: 23vw;
+      left: 28%;
+      top: -250px;
+  }
+  .blue{ /* A VOIR*/
+      background-color: blueviolet;
+      height: 6rem;
+  }
+  /* FIN ALINE BUREAU*/
+
+}
+
+/*media query for navigation on desktop screen ends here */
